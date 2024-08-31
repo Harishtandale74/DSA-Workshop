@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+.card {
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+    transition: font-size 0.3s ease;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+    font-size: 1.1em;
+    transition: font-size 0.3s ease;
+}
+
+.signature {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #fafafa;
+    border-top: 1px solid #e0e0e0;
+    transition: padding 0.3s ease;
+}
+
+.photo {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .photos {
+        padding: 15px;
+    }
+
+    .photo {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .photos {
+        padding: 10px;
+    }
+
+    .photo {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .photos {
+        padding: 8px;
+    }
+
+    .photo {
+        width: 90%;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+
+    .photos {
+        padding: 5px;
+    }
+
+    .photo {
+        width: 100%;
+    }
+}
